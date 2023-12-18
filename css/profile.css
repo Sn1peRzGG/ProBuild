@@ -1,0 +1,103 @@
+/* Стилізація загального вигляду сторінки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Стилізація блоку профілю */
+.profile-container {
+    background-color: #191a1b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Стилізація заголовка профілю */
+.profile-header h1 {
+    margin-bottom: 20px;
+}
+
+/* Стилізація власного тексту для вибору файлу */
+#avatarBtn,
+#deleteAvatar {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 12px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Задати стилі для вибору файлу при наведенні */
+#avatarBtn:hover,
+#deleteAvatar:hover {
+    background-color: #0056b3;
+}
+
+/* Стилізація заголовків */
+h1 {
+    text-align: center;
+}
+
+table {
+    border-radius: 10px;
+}
+
+/* Стилізація таблиці історії замовлень */
+.order-history {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.order-history th, .order-history td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.order-history th {
+    background-color: #f2f2f2;
+}
+
+/* Стилізація парних та непарних рядків таблиці */
+.order-history tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+.order-history tr:nth-child(even) {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        /* overflow: hidden; */
+        width: 100%;
+    }
+    table {
+        margin-left: -30px;
+        scale: 0.9;
+    }
+    th, td {
+        width: min-content;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .main {
+        height: 1250px;
+    }
+}

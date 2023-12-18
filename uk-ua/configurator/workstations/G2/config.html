@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ProBuild Systems</title>
+        <link rel="stylesheet" href="../../../../css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        <link rel="icon" href="../../../../img/icon.png">
+        <link rel="stylesheet" href="../../../../css/configurator.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <a href="../../../index.html">
+                        <img src="../../../../img/logo.jpg" alt="Logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="../../../models.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Моделі</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../../configurator.html" class="a active">
+                                <span class="symbol">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Конфігуратор</span>
+                                <div class="line active"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../../selection.html" class="a">
+                                <span class="symbol">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="3.55" rx="2.11" ry="2.15"></ellipse>
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="15.55" rx="2.11" ry="2.15"></ellipse>
+                                        <circle fill="none" stroke="#000" cx="13.15" cy="9.55" r="2.15"></circle>
+                                        <rect x="1" y="3" width="3" height="1"></rect>
+                                        <rect x="10" y="3" width="8" height="1"></rect>
+                                        <rect x="1" y="9" width="8" height="1"></rect>
+                                        <rect x="15" y="9" width="3" height="1"></rect>
+                                        <rect x="1" y="15" width="3" height="1"></rect>
+                                        <rect x="10" y="15" width="8" height="1"></rect>
+                                    </svg>
+                                </span>
+                                <span class="menu-txt">Підбір</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../../support.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Підтримка</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-change">
+                    <a href="../../../../en-us/configurator/workstations/G2/config.html" class="lang">Eng</a>
+                    <a href="config.html" class="lang active" style="margin-left: 5px;">Укр</a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html">
+                        <ion-icon id="profile" name="person-circle-outline"></ion-icon>
+                        <img id="avatarPreview" src="#" alt="Avatar" style="display: none; width: 48px;">
+                    </a>
+                </div>
+            </header>
+
+            <main class="main" style="display: inline-flex;">
+                <nav class="sidebar">
+                    <div class="menu_container">
+                        <div class="menu_items">
+                            <ul class="menu_item">
+                                <li class="item">
+                                    <a href="#graphics-cards" class="link flex">
+                                        <span uk-icon="icon: hp-graphics-cards;">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <path d="M2,4V3H0V4H1V16H2V15H20V4ZM19,14H2V5H19Z"></path>
+                                                <path d="M14.5,12A2.5,2.5,0,1,0,12,9.5,2.51,2.51,0,0,0,14.5,12Zm0-4A1.5,1.5,0,1,1,13,9.5,1.5,1.5,0,0,1,14.5,8Z"></path>
+                                                <rect x="4" y="17" width="7" height="1"></rect>
+                                                <rect x="4" y="7" width="1" height="5"></rect>
+                                                <rect x="8" y="7" width="1" height="5"></rect>
+                                            </svg>
+                                        </span>
+                                        <span class="menu_text">Videocard</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#processors" class="link flex">
+                                        <span uk-icon="icon: hp-processors;">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <rect x="18" y="14" width="2" height="1"></rect>
+                                                <rect x="18" y="11" width="2" height="1"></rect>
+                                                <rect x="18" y="8" width="2" height="1"></rect>
+                                                <rect x="18" y="5" width="2" height="1"></rect>
+                                                <rect y="14" width="2" height="1"></rect>
+                                                <rect y="11" width="2" height="1"></rect>
+                                                <rect y="8" width="2" height="1"></rect>
+                                                <rect y="5" width="2" height="1"></rect>
+                                                <rect x="5" y="18" width="1" height="2"></rect>
+                                                <rect x="8" y="18" width="1" height="2"></rect>
+                                                <rect x="11" y="18" width="1" height="2"></rect>
+                                                <rect x="14" y="18" width="1" height="2"></rect>
+                                                <rect x="5" width="1" height="2"></rect>
+                                                <rect x="8" width="1" height="2"></rect>
+                                                <rect x="11" width="1" height="2"></rect>
+                                                <rect x="14" width="1" height="2"></rect>
+                                                <path d="M3,17H17V3H3ZM4,4H16V16H4Z"></path>
+                                                <path d="M6,14h8V6H6ZM7,7h6v6H7Z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="menu_text">Processor</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#motherboards" class="link flex">
+                                        <span uk-icon="icon: hp-motherboards;">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <rect y="2" width="1" height="9"></rect>
+                                                <rect x="15" y="3" width="1" height="7"></rect>
+                                                <rect x="7" y="15" width="9" height="1"></rect>
+                                                <rect x="7" y="12" width="9" height="1"></rect>
+                                                <path d="M3,0V20H20V0ZM19,19H4V1H19Z"></path>
+                                                <path d="M12,4H7V9h5ZM11,8H8V5h3Z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="menu_text">Motherboard</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#memory" class="link flex">
+                                        <span uk-icon="icon: hp-memory;">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <path d="M0,3V15H20V3ZM19,14H1V4H19Z"></path>
+                                                <rect x="2" y="17" width="16" height="1"></rect>
+                                                <rect x="3" y="7" width="2" height="4"></rect>
+                                                <rect x="7" y="7" width="2" height="4"></rect>
+                                                <rect x="15" y="7" width="2" height="4"></rect>
+                                                <rect x="11" y="7" width="2" height="4"></rect>
+                                            </svg>
+                                        </span>
+                                        <span class="menu_text">RAM</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="#ssd" class="link flex">
+                                        <span uk-icon="icon: hp-ssd;">
+                                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                                <path d="M2,0V20H18V0ZM3,1H5V3H6V1H8V3H9V1h2V3h1V1h2V3h1V1h2V5H3ZM17,19H3V6H17Z"></path>
+                                                <rect x="6" y="9" width="3" height="1"></rect>
+                                                <rect x="6" y="12" width="3" height="1"></rect>
+                                                <rect x="6" y="15" width="3" height="1"></rect>
+                                                <rect x="11" y="9" width="3" height="1"></rect>
+                                                <rect x="11" y="12" width="3" height="1"></rect>
+                                                <rect x="11" y="15" width="3" height="1"></rect>
+                                            </svg>
+                                        </span>
+                                        <span class="menu_text">SSD</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="cards-wrapper">
+                    <ul class="section" id="info">
+                        <li>Конфігуратор ProBuild G2 PRO</li>
+                    </ul>
+                    <ul class="section graphics-card" id="graphics-cards">
+                        <li>
+                            <span class="mark">
+                                <svg width="40" height="40" viewBox="0 0 20 20">
+                                    <path d="M2,4V3H0V4H1V16H2V15H20V4ZM19,14H2V5H19Z"></path>
+                                    <path d="M14.5,12A2.5,2.5,0,1,0,12,9.5,2.51,2.51,0,0,0,14.5,12Zm0-4A1.5,1.5,0,1,1,13,9.5,1.5,1.5,0,0,1,14.5,8Z"></path>
+                                    <rect x="4" y="17" width="7" height="1"></rect>
+                                    <rect x="4" y="7" width="1" height="5"></rect>
+                                    <rect x="8" y="7" width="1" height="5"></rect>
+                                </svg>
+                            </span>
+                            <h2>Graphics Card</h2>
+                        </li>
+                        <div class="img-container">
+                            <img src="../../../../img/graphics-card.jpg" alt="Graphics Card">
+                        </div>
+                        <li>
+                            <h2 class="element active">NVIDIA Quadro T1000</h2>
+                            <p>4GB, 896 CUDA</p>
+                        </li>
+                        <li>
+                            <h2 class="element">ASUS GeForce RTX 4070 Ti ROG Strix</h2>
+                            <p>12GB, 7680 CUDA</p>
+                        </li>
+                        <li>
+                            <h2 class="element">Palit GeForce RTX 4070 GamingPro</h2>
+                            <p>12GB, 5888 CUDA</p>
+                        </li>
+                        <li>
+                            <h2 class="element">MSI GeForce RTX 4070 GAMING X TRIO</h2>
+                            <p>12GB, 5888 CUDA</p>
+                        </li>
+                        <li>
+                            <h2 class="element">NVIDIA RTX A4000</h2>
+                            <p>16GB, 6144 CUDA</p>
+                        </li>
+                    </ul>
+                    <ul class="section processor" id="processors">
+                        <li>
+                            <span class="mark">
+                                <svg width="40" height="40" viewBox="0 0 20 20">
+                                    <rect x="18" y="14" width="2" height="1"></rect>
+                                    <rect x="18" y="11" width="2" height="1"></rect>
+                                    <rect x="18" y="8" width="2" height="1"></rect>
+                                    <rect x="18" y="5" width="2" height="1"></rect>
+                                    <rect y="14" width="2" height="1"></rect>
+                                    <rect y="11" width="2" height="1"></rect>
+                                    <rect y="8" width="2" height="1"></rect>
+                                    <rect y="5" width="2" height="1"></rect>
+                                    <rect x="5" y="18" width="1" height="2"></rect>
+                                    <rect x="8" y="18" width="1" height="2"></rect>
+                                    <rect x="11" y="18" width="1" height="2"></rect>
+                                    <rect x="14" y="18" width="1" height="2"></rect>
+                                    <rect x="5" width="1" height="2"></rect>
+                                    <rect x="8" width="1" height="2"></rect>
+                                    <rect x="11" width="1" height="2"></rect>
+                                    <rect x="14" width="1" height="2"></rect>
+                                    <path d="M3,17H17V3H3ZM4,4H16V16H4Z"></path>
+                                    <path d="M6,14h8V6H6ZM7,7h6v6H7Z"></path>
+                                </svg>
+                            </span>
+                            <h2>Processor</h2>
+                        </li>
+                        <div class="img-container">
+                            <img src="../../../../img/processor.jpg" alt="Processor">
+                        </div>
+                        <li>
+                            <h2 class="element active">Intel® Core™ i5-12400(F)</h2>
+                            <p>Up to 4.4Ghz, 6 Cores</p>
+                        </li>
+                        <li>
+                            <h2 class="element">Intel® Core™ i5-13600K(F)</h2>
+                            <p>Up to 5.1Ghz, 14 Cores</p>
+                        </li>
+                        <li>
+                            <h2 class="element">Intel® Core™ i5-13600K(F)</h2>
+                            <p>Up to 5.1Ghz, 14 Cores</p>
+                        </li>
+                        <li>
+                            <h2 class="element">Intel® Core™ i5-14600K(F)</h2>
+                            <p>Up to 5.3Ghz, 14 Cores</p>
+                        </li>
+                    </ul>
+                    <ul class="section motherboard" id="motherboards">
+                        <li>
+                            <span class="mark">
+                                <svg width="40" height="40" viewBox="0 0 20 20">
+                                    <rect y="2" width="1" height="9"></rect>
+                                    <rect x="15" y="3" width="1" height="7"></rect>
+                                    <rect x="7" y="15" width="9" height="1"></rect>
+                                    <rect x="7" y="12" width="9" height="1"></rect>
+                                    <path d="M3,0V20H20V0ZM19,19H4V1H19Z"></path>
+                                    <path d="M12,4H7V9h5ZM11,8H8V5h3Z"></path>
+                                </svg>
+                            </span>
+                            <h2>Motherboard</h2>
+                        </li>
+                        <div class="img-container">
+                            <img src="../../../../img/motherboard.jpg" alt="Motherboard">
+                        </div>
+                        <li>
+                            <h2 class="element active">MSI MPG Z790 EDGE</h2>
+                            <p>DDR5, Wi-Fi</p>
+                        </li>
+                        <li>
+                            <h2 class="element">MSI MPG Z790 CARBON</h2>
+                            <p>DDR5, Wi-Fi</p>
+                        </li>
+                        <li>
+                            <h2 class="element">ASUS ROG STRIX Z790-A GAMING</h2>
+                            <p>DDR5, Wi-Fi</p>
+                        </li>
+                        <li>
+                            <h2 class="element">ASUS ROG MAXIMUS Z790 HERO</h2>
+                            <p>DDR5, Wi-Fi</p>
+                        </li>
+                    </ul>
+                    <ul class="section memory" id="memory">
+                        <li>
+                            <span class="mark">
+                                <svg width="40" height="40" viewBox="0 0 20 20">
+                                    <path d="M0,3V15H20V3ZM19,14H1V4H19Z"></path>
+                                    <rect x="2" y="17" width="16" height="1"></rect>
+                                    <rect x="3" y="7" width="2" height="4"></rect>
+                                    <rect x="7" y="7" width="2" height="4"></rect>
+                                    <rect x="15" y="7" width="2" height="4"></rect>
+                                    <rect x="11" y="7" width="2" height="4"></rect>
+                                </svg>
+                            </span>
+                            <h2>RAM</h2>
+                        </li>
+                        <div class="img-container">
+                            <img src="../../../../img/memory.jpg" alt="RAM">
+                        </div>
+                        <li>
+                            <h2 class="element active">32GB Kingston Fury Beast RGB</h2>
+                            <p>DDR5, 5200MHz, 2x16GB</p>
+                        </li>
+                        <li>
+                            <h2 class="element">48GB G.SKILL TRIDENT Z5 RGB</h2>
+                            <p>DDR5, 6000MHz, 2x24GB</p>
+                        </li>
+                        <li>
+                            <h2 class="element">64GB Kingston Fury Beast RGB</h2>
+                            <p>DDR5, 5600MHz, 2x32GB</p>
+                        </li>
+                        <li>
+                            <h2 class="element">96GB G.SKILL TRIDENT Z5 RGB</h2>
+                            <p>DDR5, 5600MHz, 2x48GB</p>
+                        </li>
+                    </ul>
+                    <ul class="section ssd" id="ssd">
+                        <li>
+                            <span class="mark">
+                                <svg width="40" height="40" viewBox="0 0 20 20">
+                                    <path d="M2,0V20H18V0ZM3,1H5V3H6V1H8V3H9V1h2V3h1V1h2V3h1V1h2V5H3ZM17,19H3V6H17Z"></path>
+                                    <rect x="6" y="9" width="3" height="1"></rect>
+                                    <rect x="6" y="12" width="3" height="1"></rect>
+                                    <rect x="6" y="15" width="3" height="1"></rect>
+                                    <rect x="11" y="9" width="3" height="1"></rect>
+                                    <rect x="11" y="12" width="3" height="1"></rect>
+                                    <rect x="11" y="15" width="3" height="1"></rect>
+                                </svg>
+                            </span>
+                            <h2>SSD</h2>
+                        </li>
+                        <div class="img-container">
+                            <img src="../../../../img/ssd.jpg" alt="SSD">
+                        </div>
+                        <li>
+                            <h2 class="element active">1TB Samsung 990 PRO</h2>
+                            <p>7450MB/s, Gen4</p>
+                        </li>
+                        <li>
+                            <h2 class="element">2TB Samsung 970 EVO Plus</h2>
+                            <p>3500MB/s, Gen3</p>
+                        </li>
+                        <li>
+                            <h2 class="element">1TB MSI SPATIUM M570</h2>
+                            <p>9500MB/s, Gen5</p>
+                        </li>
+                        <li>
+                            <h2 class="element">4TB Kingston FURY Renegade</h2>
+                            <p>7300MB/s, Gen4</p>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2023 ProBuild Systems. Усі права захищено.</p>
+                <ul>
+                    <li><a href="#">Головна сторінка</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <script src="../../../../js/configurator.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

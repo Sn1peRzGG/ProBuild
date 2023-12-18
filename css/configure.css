@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.main {
+    padding: 15px;
+    gap: 30px;
+}
+
+.main .text {
+    width: 50%;
+}
+
+.main .text h2 {
+    font-size: 24px;
+}
+
+.main .text h1 {
+    font-size: 52px;
+}
+
+.main .text p {
+    font-size: 18px;
+}
+
+.main .choose-series {
+    margin-top: 25px;
+}
+
+.main .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main .configure-pc {
+    width: 335px;
+    height: 420px;
+    background: #212124;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    opacity: 1;
+    transform: scale(0.95);
+    transition: all 0.3s ease,
+    transform 0.3s ease;
+}
+
+.main .configure-pc.active {
+    transform: scale(1.1);
+}
+
+.main .configure-pc:hover,
+.main .configure-pc.active {
+    background: #6046ff;
+    transition: background 0.3s ease;
+}
+
+.main .configure-pc:hover .price,
+.main .configure-pc.active .price {
+    background: #c0ff01;
+    color: #191A1B;
+    transition: background 0.3s ease,
+    color 0.3s ease;
+}
+
+.main .configure-pc .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+    height: 240px;
+}
+
+.main .configure-pc .img-container img:first-child {
+    z-index: 2;
+}
+
+.main .configure-pc .img-container img:nth-child(2) {
+    z-index: 1;
+    margin-top: -30px;
+    margin-left: -40px;
+}
+
+.main .configure-pc .price {
+    color: #dcff71;
+    background: #474646;
+    border: none;
+    border-radius: 30px;
+    width: 125px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    pointer-events: none;
+    margin-left: 5px;
+}
+
+
+.main .configure-pc .slogan {
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.main .configure-pc .info {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.additional-info {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.additional-container {
+    display: flex;
+    height: 400px;
+    width: 95%;
+}
+
+.additional-container:not(:first-child) {
+    margin-top: 50px;
+}
+
+.additional-container:last-child {
+    margin-bottom: 50px;
+}
+
+.main .additional-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.main .additional-info .additional-img-container {
+    border-radius: 25px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 425px;
+    min-width: 300px;
+    height: 100%;
+}
+
+.main .additional-info img {
+    height: 275px;
+    pointer-events: none;
+}
+
+.main .additional-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.additional-info .additional-text {
+    width: 80%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 25px;
+    background: #212124;
+    margin-left: 25px;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.additional-info .additional-container .additional-text .big,
+.additional-info .additional-container .additional-text .small {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.additional-info .additional-container .additional-text .big {
+    font-size: 24px;
+}
+
+.additional-info .additional-container .additional-text .big a {
+    color: #fff;
+}
+
+.additional-info .additional-container .additional-text .small {
+    font-size: 16px ;
+    color: #ccc;
+}
+
+.additional-info .additional-container .additional-text ul {
+    list-style: none;
+}
+
+.additional-info .additional-text ul li {
+    display: flex;
+    align-items: center;
+    break-inside: avoid-column;
+    margin-top: 10px;
+}
+
+.additional-info .additional-container .additional-text ul li:first-child {
+    margin-top: 20px;
+}
+
+.additional-info .additional-container .additional-text ul li span {
+    background: #191a1b;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: #fff;
+}
+
+.additional-info .additional-container .additional-text ul li div {
+    margin-left: 15px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.additional-info .additional-container .additional-text .additional-btn {
+    margin-top: 65px;
+    margin-left: 650px;
+}
+
+.additional-info .additional-container .additional-text .additional-btn button {
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+    height: 40px;
+    color: #000;
+    background: var(--theme-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.additional-info .additional-text .additional-btn span {
+    width: 20px;
+    height: 20px;
+}
+
+.additional-info .additional-container .additional-text .additional-btn a:hover span {
+    transform: rotate(90deg);
+    transition: all 0.6s ease;
+}
+
+.additional-info .additional-container .additional-text .additional-btn a:not(:hover) span {
+    transform: rotate(-90deg);
+    transition: all 0.5s ease;
+}
+
+/* Tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .additional-container {
+        flex-wrap: wrap;
+        width: calc(100% - 30px);
+    }
+    .additional-img-container {
+        margin-left: 20px;
+    }
+    .additional-container .additional-text {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Big PC */
+@media screen and (min-width: 1301px) {
+    .main .configure-pc {
+        width: 22.5%;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+    .additional-container .additional-img-container {
+        margin-top: 20px;
+    }
+    .main .additional-container .additional-text {
+        width: 70%;
+    }
+    .additional-container .additional-img-container {
+        margin-left: 20px;
+    }
+    .additional-text {
+        margin-top: 20px;
+    }
+    .main .configure-pc {
+        width: 30%;
+    }
+    .additional-container .additional-btn {
+        display: none;
+    }
+}
+
+/* Smartphone and Tablet */
+@media screen and (max-width: 767px),
+screen and (min-width: 767px) and (max-width: 1023px) {
+    .additional-container {
+        width: calc(100% - 40px);
+    }
+    .additional-container .additional-img-container {
+        margin-left: 20px;
+    }
+    .additional-container .additional-img-container a img {
+        height: 200px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .additional-container .additional-text {
+        margin-top: 20px;
+        width: calc(100% - 30px);
+        height: 400px;
+        flex-wrap: wrap;
+    }
+    .additional-info .additional-container .additional-img-container a {
+        width: calc(100% - 30px);
+    }
+    .main .configure-pc div {
+        width: 85%;
+    }
+    .additional-container .additional-btn {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .additional-container {
+        width: 100%;
+        height: fit-content;
+    }
+    .main .configure-pc {
+        width: 45%;
+    }
+    .main .additional-container .additional-img-container {
+        width: 95%;
+        height: 350px;
+    }
+    .main .additional-container .additional-text {
+        width: 95%;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px) {
+    .main .text {
+        width: 100%;
+        text-align: center;
+    }
+    .main .configure-pc {
+        width: 90%;
+    }
+    .additional-container {
+        width: 105%;
+        margin-left: -20px;
+        height: fit-content;
+    }
+    .main .configure-pc {
+        width: 45%;
+    }
+    .main .additional-container .additional-img-container {
+        width: 98%;
+        height: 350px;
+    }
+    .main .additional-container .additional-text {
+        width: 98%;
+        padding: 20px;
+    }
+    .main .configure-pc {
+        width: 90%;
+    }
+}

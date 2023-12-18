@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ProBuild Systems</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/profile.css">
+        <link rel="icon" href="../img/icon.png">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/logo.jpg" alt="Logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="models.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Моделі</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="configurator.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Конфігуратор</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="selection.html" class="a">
+                                <span class="symbol">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="3.55" rx="2.11" ry="2.15"></ellipse>
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="15.55" rx="2.11" ry="2.15"></ellipse>
+                                        <circle fill="none" stroke="#000" cx="13.15" cy="9.55" r="2.15"></circle>
+                                        <rect x="1" y="3" width="3" height="1"></rect>
+                                        <rect x="10" y="3" width="8" height="1"></rect>
+                                        <rect x="1" y="9" width="8" height="1"></rect>
+                                        <rect x="15" y="9" width="3" height="1"></rect>
+                                        <rect x="1" y="15" width="3" height="1"></rect>
+                                        <rect x="10" y="15" width="8" height="1"></rect>
+                                    </svg>
+                                </span>
+                                <span class="menu-txt">Підбір</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="support.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Підтримка</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-change">
+                    <a href="../en-us/profile.html" class="lang">Eng</a>
+                    <a href="profile.html" class="lang active" style="margin-left: 5px;">Укр</a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html" class="a active">
+                        <ion-icon id="profile" name="person-circle-outline"></ion-icon>
+                        <img id="avatarPreview" src="#" alt="Avatar" style="display: none; width: 48px;">
+                    </a>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <h1>Ласкаво просимо на сторінку вашого профілю</h1>
+                    </div>
+                    <div class="profile-content">
+                        <p><strong>Ім'я:</strong><span id="profileName"></span></p>
+                        <p><strong>Електронна адреса:</strong><span id="profileEmail"></span></p>
+                        <p><strong>Пароль:</strong><span id="profilePassword"></span></p>
+                        <label for="avatarInput" id="avatarBtn">Оберіть аватар</label>
+                        <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                    </div>
+                    <button id="deleteAvatar" style="border: none; margin-bottom: 5px;">Видалити аватар</button>
+                    <h1>Історія замовлень</h1>
+                    <table class="order-history">
+                        <thead>
+                            <tr>
+                                <th>ID замовлення</th>
+                                <th>Дата</th>
+                                <th>Продукт</th>
+                                <th>Ціна</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7113</td>
+                                <td>2023-09-17</td>
+                                <td>ProBuild FURY</td>
+                                <td>50999 ₴</td>
+                                <td>Відправлено</td>
+                            </tr>
+                            <tr>
+                                <td>9627</td>
+                                <td>2023-05-23</td>
+                                <td>ProBuild G2 PRO</td>
+                                <td>53999 ₴</td>
+                                <td>Доставлено</td>
+                            </tr>
+                            <tr>
+                                <td>5210</td>
+                                <td>2023-03-13</td>
+                                <td>ProBuild CHAMPION</td>
+                                <td>60999 ₴</td>
+                                <td>Доставлено</td>
+                            </tr>
+                            <tr>
+                                <td>4894</td>
+                                <td>2023-08-06</td>
+                                <td>ProBuild POSEIDON CONCEPT</td>
+                                <td>172999 ₴</td>
+                                <td>Відправлено</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2023 ProBuild Systems. Усі права захищено.</p>
+                <ul>
+                    <li><a href="#">Головна сторінка</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/profile.js"></script>
+        <script>
+            // Отримуємо посилання на елементи сторінки профілю
+            const profileName = document.getElementById('profileName');
+            const profileEmail = document.getElementById('profileEmail');
+            const profilePassword = document.getElementById('profilePassword');
+
+            // Отримуємо дані з локального сховища браузера
+            const storedName = localStorage.getItem('name');
+            const storedEmail = localStorage.getItem('email');
+            const storedPassword = localStorage.getItem('password');
+
+            // Відображаємо збережені дані на сторінці профілю
+            profileName.textContent = ` ${storedName}`;
+            profileEmail.textContent = ` ${storedEmail}`;
+            profilePassword.textContent = ` ${storedPassword}`;
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

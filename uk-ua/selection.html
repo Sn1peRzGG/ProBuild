@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ProBuild Systems</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="icon" href="../img/icon.png">
+        <link rel="stylesheet" href="../css/selection.css">
+        <style>
+            /* Google Fonts Poppins */
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            }
+
+            body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+            }
+            .product-card {
+            border: 1px solid gray;
+            position: relative;
+            max-width: 355px;
+            width: 100%;
+            border-radius: 25px;
+            padding: 20px 30px 30px 30px;
+            background: #222;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+            overflow: hidden;
+            }
+            .product-card .main-images{
+            position: relative;
+            height: 210px;
+            }
+            .product-card .main-images img{
+            position: absolute;
+            height: 180px;
+            object-fit: cover;
+            left: 25%;
+            top: 10px;
+            transition: opacity 0.5s ease;
+            }
+            .product-card .details .name{
+            font-size: 24px;
+            font-weight: 500;
+            color: #fff;
+            }
+            .product-card .details p{
+            font-size: 12px;
+            font-weight: 400;
+            color: #fff;
+            text-align: justify;
+            }
+            .price{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            }
+            .price{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            }
+            .price .price_num{
+            font-size: 25px;
+            font-weight: 600;
+            color: #fff;
+            }
+            .product-card .button{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            border-radius: 25px;
+            margin-top: 30px;
+            overflow: hidden;
+            }
+            .product-card .button .button-layer{
+            position: absolute;
+            height: 100%;
+            width: 300%;
+            left: -100%;
+            background-image: linear-gradient(135deg,#9708CC, #43CBFF,#9708CC, #43CBFF );
+            transition: all 0.4s ease;
+            border-radius: 25PX;
+            }
+            .product-card .button:hover .button-layer{
+            left: 0;
+            }
+            .product-card .button button{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background: none;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/logo.jpg" alt="Logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="models.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Моделі</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="configurator.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Конфігуратор</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="selection.html" class="a active">
+                                <span class="symbol">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="3.55" rx="2.11" ry="2.15"></ellipse>
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="15.55" rx="2.11" ry="2.15"></ellipse>
+                                        <circle fill="none" stroke="#000" cx="13.15" cy="9.55" r="2.15"></circle>
+                                        <rect x="1" y="3" width="3" height="1"></rect>
+                                        <rect x="10" y="3" width="8" height="1"></rect>
+                                        <rect x="1" y="9" width="8" height="1"></rect>
+                                        <rect x="15" y="9" width="3" height="1"></rect>
+                                        <rect x="1" y="15" width="3" height="1"></rect>
+                                        <rect x="10" y="15" width="8" height="1"></rect>
+                                    </svg>
+                                </span>
+                                <span class="menu-txt">Підбір</span>
+                                <div class="line active"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="support.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Підтримка</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-change">
+                    <a href="../en-us/selection.html" class="lang">Eng</a>
+                    <a href="selection.html" class="lang active" style="margin-left: 5px;">Укр</a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html">
+                        <ion-icon id="profile" name="person-circle-outline"></ion-icon>
+                        <img id="avatarPreview" src="#" alt="Avatar" style="display: none; width: 48px;">
+                    </a>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="text-wrapper">
+                    <h1 class="big">Підберіть найкращий ПК для себе!</h1>
+                    <div class="btn-conainer">
+                        <button class="select-btn">NVIDIA GeForce RTX 4090</button>
+                        <button class="select-btn">Intel Core i9</button>
+                        <button class="select-btn">64 ГБ оперативної пам'яті DDR4</button>
+                        <button class="select-btn">Водяне охолодження</button>
+                    </div>
+                    <div class="cards">
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-cyber.png">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild CYBER</span>
+                            <p>Футуристичний ігровий ПК/p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">89999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/gaming/cyber/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-G2-pro.png" style="margin-left: 8%;">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild G2 PRO</span>
+                            <p>Для великих проектів</p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">53999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/workstations/G2/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-genesis.png" style="margin-left: 5%;">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild GENESIS</span>
+                            <p>Вроджена перевага</p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">165999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/concept/genesis/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-lumen-x.png" style="margin-left: 5%;">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild LUMEN X</span>
+                            <p>Як ніхто інший</p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">186999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/concept/lumen-x/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="width: 95%; height: 1px; margin-top: 45px; color: #fff;">
+                    <div class="btn-conainer" style="margin-top: 20px;">
+                        <button class="select-btn">NVIDIA GeForce RTX 4070</button>
+                        <button class="select-btn">Intel Core i7</button>
+                        <button class="select-btn">32 ГБ оперативної пам'яті DDR4</button>
+                        <button class="select-btn">Повітряне охолодження</button>
+                    </div>
+                    <div class="cards">
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-champion.png">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild CHAMPION</span>
+                            <p>Продвинутий ігровий ПК</p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">60999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/gaming/champion/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-leader.png" style="margin-left: -4%;">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild LEADER</span>
+                            <p>Потужний ігровий ПК</p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">79999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/gaming/leader/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="main-images">
+                            <img src="../img/configurator/probuild-unlimited.png" style="margin-left: 5%;">
+                            </div>
+                            <div class="details">
+                            <span class="name">ProBuild UNLIMITED</span>
+                            <p>Необмежений ПК</p>
+                            </div>
+                            <div class="price">
+                                <span class="price_num">50999 ₴</span>
+                            </div>
+                            <div class="button">
+                                <div class="button-layer"></div>
+                                <a href="configurator/unlimited/config.html">
+                                    <button>Більше</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2023 ProBuild Systems. Усі права захищено.</p>
+                <ul>
+                    <li><a href="#">Головна сторінка</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/profile.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

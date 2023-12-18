@@ -1,0 +1,282 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #eef5fe;
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* Pre css */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  border-right: 1px solid #111;
+  top: 100px;
+  left: 0;
+  height: calc(100% - 100px);
+  width: 200px;
+  background: #232425;
+  padding: 15px 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+  overflow-y: auto;
+  height: calc(100% - 82px);
+}
+
+.menu_container::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  height: 50px;
+  width: 180px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #707070;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover,
+.menu_item a.active {
+    color: #fff;
+    background-color: #4070f4;
+}
+
+.menu_item a.active {
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
+
+.menu_item a.active span {
+  fill: #fff;
+  transition: all 0.1s ease;
+}
+
+.link span {
+    fill: #707070;
+    transition: fill 0.3s ease-in-out;
+}
+
+.link:hover span {
+    fill: #fff;
+}
+
+.menu_text {
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Content */
+.cards-wrapper {
+  width: 100%;
+  background: #232425;
+}
+
+ul.section{
+  width: calc(100% - 200px);
+  margin-left: 100px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-top: 0;
+  padding: 30px;
+  padding-bottom: 0;
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: 'Roboto-local',sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #ccc;
+  list-style: none;
+  background: #111;
+  border-radius: 25px 5px 25px 25px;
+}
+
+ul.section li {
+  display: flex;
+  margin-top: 5px;
+}
+
+ul.section li:first-child {
+  padding-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 50px;
+}
+
+ul.section li:last-child {
+  margin-bottom: 20px;
+}
+
+ul.section li:first-child h2 {
+  margin-left: 25px;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+ul.section li h2:hover {
+  cursor: pointer;
+}
+
+ul.section li h2 {
+  background: transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  transition: all 0.4s ease-out;
+  width: fit-content;
+  padding: 2px 10px 2px 10px;
+}
+
+ul.section li h2.active {
+  background: var(--theme-color);
+}
+
+ul.section:last-child {
+  margin-bottom: 340px;
+}
+
+.mark {
+  fill: #fff;
+}
+
+.mark svg {
+  width: 36px;
+}
+
+ul.section li:not(:first-child) h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+
+ul.section li:not(:first-child) {
+  justify-content: space-between;
+}
+
+.cards {
+    padding: 15px;
+}
+
+ul#info {
+  height: 120px;
+  width: fit-content;
+}
+
+ul#info li {
+  font-size: 52px;
+  font-weight: 600;
+  margin-top: 35px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  ul#info {
+    width: calc(100% - 200px);
+  }
+  ul#info li {
+    font-size: 40px;
+  }
+  li p {
+    display: none;
+  }
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 60px;
+  }
+  .link {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .main {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+  .menu_text {
+    display: none;
+  }
+  ul.section {
+    flex-wrap: wrap;
+    height: max-content;
+    /* width: calc(100% - 60px); */
+    width: 90%;
+    margin-left: 20px;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul.section li:first-child h2 {
+    font-size: 16px;
+  }
+  ul.section li p {
+    display: none;
+  }
+  ul.section li:not(:first-child) {
+    margin-top: 10px;
+  }
+  ul#info {
+    height: 180px;
+    width: 90%;
+  }
+  ul#info li {
+    font-size: 40px;
+  }
+  .img-container {
+    scale: 0.8;
+    margin-left: -40px;
+    margin-top: -50px;
+  }
+  .sidebar {
+    height: 100%;
+  }
+  li p {
+    display: none;
+  }
+}

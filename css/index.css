@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --theme-color: #f60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: #222;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid #2f2f2f;
+    position: fixed;
+    z-index: 1000;
+}
+
+.header .logo {
+    position: absolute;
+    left: 25px;
+}
+
+.header .logo img {
+    width: 65px;
+    border-radius: 10%;
+}
+
+.header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.header .menu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.header .menu ul li a {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.header .menu ul li a:hover,
+.header .menu ul li a:hover svg rect {
+    color: var(--theme-color);
+    fill: var(--theme-color);
+    transition: color 0.3s ease-in-out;
+    transition: fill 0.3s ease-in-out;
+}
+
+.header .menu ul li a:hover svg circle,
+.header .menu ul li a:hover svg ellipse {
+    stroke: var(--theme-color);
+    transition: stroke 0.3s ease-in-out;
+}
+
+.header .menu ul li a:hover {
+    color: var(--theme-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header .menu ul li svg rect {
+    fill: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.header .menu ul li svg circle,
+.header .menu ul li svg ellipse {
+    stroke: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.symbol ion-icon {
+    font-size: 20px;
+}
+
+.header .menu .a.active {
+    color: var(--theme-color);
+}
+
+.header .menu ul li .a.active svg rect {
+    fill: var(--theme-color);
+}
+
+.header .menu ul li .a.active svg circle,
+.header .menu ul li .a.active svg ellipse {
+    stroke: var(--theme-color);
+}
+
+.header .menu .line {
+    display: none;
+    background: var(--theme-color);
+    width: 100%; height: 3px;
+    border-radius: 5px; 
+    position: relative;
+    top: 5px;
+}
+
+.header .menu .line.active {
+    display: block;
+}
+
+.header .profile {
+    position: absolute;
+    right: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header .profile ion-icon {
+    font-size: 60px;
+    color: #fff;
+}
+
+.header .profile .a.active ion-icon {
+    color: var(--theme-color);
+}
+
+.header .profile ion-icon:hover {
+    color: var(--theme-color);
+    transition: color 0.3s ease;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    background: #191a1b;
+    margin-top: 100px;
+}
+
+.main p.baner {
+    font-size: 54px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.main .information {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .information h2,
+.main .information p {
+    height: 50px;
+    font-size: 38px;
+    padding: 20px;
+    position: absolute; 
+}
+
+.main .information p {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.main .recomendation {
+    display: block;
+    background: #111;
+    border-radius: 20px;
+    width: 465px;
+    height: max-content;
+    margin: 20px;
+    padding: 15px;
+    color: #ccc;
+    margin-top: 125px;
+}
+
+.main .recomendation.small .configure-container {
+    margin-bottom: 10px;
+}
+
+.lang-change {
+    position: absolute;
+    right: 15%;
+}
+
+.lang-change .lang {
+    color: #fff;
+    font-size: 16px;
+}
+
+.lang-change .lang:nth-child(1) {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+
+.lang-change .lang.active {
+    font-weight: 700;
+}
+
+.main .recomendation.last {
+    margin-bottom: 150px;
+}
+
+.main .recomendation .img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.main .recomendation .img-container img {
+    height: 270px;
+    pointer-events: none;
+}
+
+.main .recomendation .text-container {
+    font-size: 18px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.main .recomendation .left {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.main .recomendation .lower {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.main .recomendation .price {
+    float: right;
+    margin-top: -60px;
+}
+
+.main .recomendation ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    fill: #ccc;
+}
+
+.main .recomendation ul li span {
+    width: 40px;
+    height: 40px;
+}
+
+.main .recomendation ul li div {
+    margin-left: 15px;
+}
+
+.main .recomendation .configure-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 50px;
+    position: relative;
+    top: 32px;
+    margin-top: -20px;
+}
+
+.main .recomendation .configure-container .learn-more-btn {
+    border-radius: 40px;
+    background: #2e2e2e;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+}
+
+.main .recomendation .configure-container .learn-more-btn a {
+    color: #fff;
+}
+
+.main .recomendation .configure-container .learn-more-btn:hover a {
+    color: var(--theme-color);
+    transition: color 0.3s ease;
+}
+
+.main .recomendation .configure-container .configure-btn {
+    border-radius: 30px;
+    border: none;
+    background: var(--theme-color);
+    width: 150px;
+    height: 35px;
+}
+
+
+.main .recomendation .configure-container .configure-btn a,
+.main .recomendation .configure-container .configure-btn a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .recomendation .configure-container .configure-btn a:hover span.configure-icon {
+    transform: rotate(90deg);
+    transition: all 0.6s ease;
+}
+
+.main .recomendation .configure-container .configure-btn a:not(:hover) span.configure-icon {
+    transform: rotate(-90deg);
+    transition: all 0.5s ease;
+}
+
+.footer {
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1500;
+}
+
+.footer p {
+    margin: 0;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer ul li {
+    margin: 0 15px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: var(--theme-color);
+}
+
+.background-change {
+    margin-top: 15px;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 40%;
+}
+
+.background-change span {
+    margin-top: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: var(--background);
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px)
+{
+    .symbol {
+        display: none;
+    }
+    .main .recomendation {
+        width: 30.5%;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 767px) and (max-width: 980px)
+{
+    .symbol {
+        display: none;
+    }
+    .main .recomendation {
+        width: 44%;
+    }
+    .lang-change {
+        display: none;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px)
+{
+    .symbol {
+        display: flex;
+    }
+    :is(.line, .menu-txt) {
+        display: none;
+    }
+    * {
+        flex-wrap: wrap;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+    .header .menu ul {
+        gap: 35px;
+    }
+    .main .recomendation {
+        position: relative;
+        top: 80px;
+        width: 88%;
+    }
+    .main .recomendation:not(:first-child) {
+        margin-top: 55px;
+    }
+    .footer {
+        height: 100px;
+    }
+    .lang-change {
+        display: none;
+    }
+    .information {
+        padding-top: 80px;
+    }
+}
+
+/* @media screen and (min-width: 2560px) {
+    .header {
+        position: absolute;
+        top: 0;
+    }
+} */

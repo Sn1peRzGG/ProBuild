@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form</title>
+      <link rel="icon" href="../img/icon.png">
+      <link rel="stylesheet" href="../css/form.css">
+      <link rel="stylesheet" href="../css/index.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/logo.jpg" alt="Logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="models.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Models</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="configurator.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Configurator</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="selection.html" class="a">
+                                <span class="symbol">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="3.55" rx="2.11" ry="2.15"></ellipse>
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="15.55" rx="2.11" ry="2.15"></ellipse>
+                                        <circle fill="none" stroke="#000" cx="13.15" cy="9.55" r="2.15"></circle>
+                                        <rect x="1" y="3" width="3" height="1"></rect>
+                                        <rect x="10" y="3" width="8" height="1"></rect>
+                                        <rect x="1" y="9" width="8" height="1"></rect>
+                                        <rect x="15" y="9" width="3" height="1"></rect>
+                                        <rect x="1" y="15" width="3" height="1"></rect>
+                                        <rect x="10" y="15" width="8" height="1"></rect>
+                                    </svg>
+                                </span>
+                                <span class="menu-txt">Selection</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="support.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Support</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-change">
+                    <a href="form.html" class="lang active">Eng</a>
+                    <a href="../uk-ua/form.html" class="lang" style="margin-left: 5px;">Укр</a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html">
+                        <ion-icon id="profile" name="person-circle-outline"></ion-icon>
+                        <img id="avatarPreview" src="#" alt="Avatar" style="display: none; width: 48px;">
+                    </a>
+                </div>
+            </header>
+            
+            <main class="wrapper">
+                <div class="title-text">
+                    <div class="title login">
+                    Login
+                    </div>
+                    <div class="title signup">
+                    Signup
+                    </div>
+                </div>
+                <div class="form-container">
+                    <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Signup</label>
+                    <div class="slider-tab"></div>
+                    </div>
+                    <div class="form-inner">
+                    <form action="profile.html" class="login">
+                        <div class="field">
+                            <input type="text" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="field">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Login">
+                        </div>
+                        <div class="signup-link">
+                            Not a member? <a href="">Signup now</a>
+                        </div>
+                    </form>
+                    <form action="profile.html" class="signup">
+                        <div class="field">
+                            <input type="text" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="field">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" id="passwordConfirm" placeholder="Confirm password" required>
+                        </div>
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Signup">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </main>
+    
+            <footer class="footer">
+                <p>&copy; 2023 ProBuild Systems. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Home page</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <script>
+            const loginText = document.querySelector(".title-text .login");
+            const loginForm = document.querySelector("form.login");
+            const loginBtn = document.querySelector("label.login");
+            const signupBtn = document.querySelector("label.signup");
+            const signupLink = document.querySelector("form .signup-link a");
+            signupBtn.onclick = (()=>{
+            loginForm.style.marginLeft = "-50%";
+            loginText.style.marginLeft = "-50%";
+            });
+            loginBtn.onclick = (()=>{
+            loginForm.style.marginLeft = "0%";
+            loginText.style.marginLeft = "0%";
+            });
+            signupLink.onclick = (()=>{
+            signupBtn.click();
+            return false;
+            });
+        </script>
+        <script>
+            const form = document.querySelector('form.login');
+
+            form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Зчитуємо поточні дані з локального сховища браузера (якщо вони є)
+            const storedName = localStorage.getItem('name');
+            const storedEmail = localStorage.getItem('email');
+            const storedPassword = localStorage.getItem('password');
+
+            // Оновлюємо дані в локальному сховищі браузера
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            // Перенаправляємо користувача на сторінку профілю
+            window.location.href = 'profile.html';
+            });
+        </script>
+        <script src="../js/profile.js"></script>
+        <script src="../js/script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   </body>
+</html>

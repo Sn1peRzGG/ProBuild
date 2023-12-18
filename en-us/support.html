@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ProBuild Systems</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="icon" href="../img/icon.png">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            .main {
+                padding: 20px;
+            }
+            
+            .faq-item, .contact-form {
+                margin-bottom: 20px;
+            }
+            
+            .contact-form textarea,
+            .contact-form input {
+                margin-bottom: 15px;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .contact-form label {
+                color: var(--theme-color);
+            }
+            
+            .contact-form button {
+                background-color: var(--theme-color);
+                color: #fff;
+                border: none;
+                padding: 15px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            
+            .contact-form button:hover {
+                background-color: rgb(252, 118, 28);
+            }
+            
+            @media screen and (min-width: 2560px) {
+                .main {
+                    height: 1250px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="../img/logo.jpg" alt="Logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="models.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Models</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="configurator.html" class="a">
+                                <span class="symbol">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Configurator</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="selection.html" class="a">
+                                <span class="symbol">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="3.55" rx="2.11" ry="2.15"></ellipse>
+                                        <ellipse fill="none" stroke="#000" cx="6.11" cy="15.55" rx="2.11" ry="2.15"></ellipse>
+                                        <circle fill="none" stroke="#000" cx="13.15" cy="9.55" r="2.15"></circle>
+                                        <rect x="1" y="3" width="3" height="1"></rect>
+                                        <rect x="10" y="3" width="8" height="1"></rect>
+                                        <rect x="1" y="9" width="8" height="1"></rect>
+                                        <rect x="15" y="9" width="3" height="1"></rect>
+                                        <rect x="1" y="15" width="3" height="1"></rect>
+                                        <rect x="10" y="15" width="8" height="1"></rect>
+                                    </svg>
+                                </span>
+                                <span class="menu-txt">Selection</span>
+                                <div class="line"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="support.html" class="a active">
+                                <span class="symbol">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span class="menu-txt">Support</span>
+                                <div class="line active"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="lang-change">
+                    <a href="support.html" class="lang active">Eng</a>
+                    <a href="../uk-ua/support.html" class="lang" style="margin-left: 5px;">Укр</a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html">
+                        <ion-icon id="profile" name="person-circle-outline"></ion-icon>
+                        <img id="avatarPreview" src="#" alt="Avatar" style="display: none; width: 48px;">
+                    </a>
+                </div>
+            </header>
+
+            <main class="main">
+                <section class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <h3>How can I contact customer support?</h3>
+                        <p>You can reach our customer support team via email at support@example.com or by phone at 123-456-7890.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer refunds for products?</h3>
+                        <p>Yes, we offer a 30-day money-back guarantee for all our products. Please check our refund policy for more details.</p>
+                    </div>
+                </section>
+        
+                <section class="contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="#">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+        
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2023 ProBuild Systems. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Home page</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </footer>
+        </div>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/profile.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
